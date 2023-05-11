@@ -57,9 +57,10 @@ CFLAGS	= -Wall -Wextra -Werror
 
 all: ${NAME}
 
-$(NAME): ${OBJS}
-	${LIBC} $(NAME) ${OBJS}
+$(NAME): ${OBJS} ${OBJS_B}
+	${LIBC} $(NAME) ${OBJS} ${OBJS_B}
 
+#for 42 bonus
 bonus: ${OBJS} ${OBJS_B}
 	${LIBC} $(NAME) ${OBJS_B}
 

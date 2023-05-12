@@ -30,11 +30,9 @@ static bool	is_space(char c)
 
 int	ft_atoi(const char *str)
 {
-	int	i;
 	int	ans;
 	int	result;
 
-	i = 0;
 	ans = 0;
 	result = 1;
 	while (is_space(*str))

@@ -21,10 +21,8 @@ static bool	check_seperator(char c_str, char c)
 
 static int	count_strings(char *str, char c)
 {
-	int	i;
 	int	count;
 
-	i = 0;
 	count = 0;
 	while (*str)
 	{

@@ -1,3 +1,4 @@
+SRCS_DIR = src/
 SRCS	=	ft_atoi.c \
 			ft_bzero.c \
 			ft_calloc.c \
@@ -44,15 +45,18 @@ SRCS_B = 	ft_lstadd_back.c \
 			ft_lstsize.c
 
 
-OBJS	= ${SRCS:.c=.o}
-OBJS_B	= ${SRCS_B:.c=.o}
-INCS	= includes
+CFILES = $(addprefix $(SRCS_DIR), $(SRCS))
+CFILES_B = $(addprefix $(SRCS_DIR), $(SRCS_B))
+
+OBJS	= ${CFILES:.c=.o}
+OBJS_B	= ${CFILES_B:.c=.o}
+INCS	= ./inc
 NAME	= libft.a
 LIBC	= ar rcs
 LIBR	= ranlib
 CC		= gcc
 RM		= rm -f
-CFLAGS	= -Wall -Wextra -Werror
+CFLAGS	= -std=c11 -Wall -Wextra -Werror -I$(INCS)
 
 
 all: ${NAME}

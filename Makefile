@@ -42,7 +42,9 @@ SRCS_B = 	ft_lstadd_back.c \
 			ft_lstlast.c \
 			ft_lstmap.c \
 			ft_lstnew.c \
-			ft_lstsize.c
+			ft_lstsize.c \
+			get_next_line.c \
+			get_next_line_utils.c
 
 
 CFILES = $(addprefix $(SRCS_DIR), $(SRCS))
@@ -50,7 +52,7 @@ CFILES_B = $(addprefix $(SRCS_DIR), $(SRCS_B))
 
 OBJS	= ${CFILES:.c=.o}
 OBJS_B	= ${CFILES_B:.c=.o}
-INCS	= ./inc
+INCS	= ./includes
 NAME	= libft.a
 LIBC	= ar rcs
 LIBR	= ranlib
